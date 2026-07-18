@@ -1,10 +1,16 @@
 # dave.dk
 
 A gloriously geeky 90s-GeoCities tribute homepage for `dave.dk`, a domain whose only
-real job is holding some private email. There's no product here, just vibes: a tiled
-starfield, WordArt, a scrolling marquee, an eternal "Under Construction" sign, a fake
-hit counter, a webring that goes nowhere, 88×31 badges, and a hidden nod to the old
-page's single `Hello world` link.
+real job is holding some private email. There's no product here — just a homepage the
+way 1999 made them: a tiled starfield GIF, WordArt, a scrolling marquee, an eternal
+"Under Construction" sign, a fake hit counter, a webring that goes nowhere, 88×31
+badges, and a hidden nod to the old page's single `Hello world` link.
+
+The copy and styling deliberately stay in character for 1999: earnest webmaster voice
+(no modern irony or post-1999 memes), a real repeating background tile instead of CSS
+gradients, hard bevels instead of soft glows, no rounded corners, no viewport meta tag
+(phones get the authentic desktop experience), and chunky `steps()` animation timing so
+motion chugs like GIF frames instead of easing at 60fps.
 
 ## What's inside
 
@@ -14,6 +20,8 @@ page's single `Hello world` link.
 - **`gifs/`**: authentic animated GIFs salvaged from real 1990s GeoCities pages via the
   Internet Archive's [GifCities](https://gifcities.org/). Hosted locally (not hotlinked)
   so the site stays self-contained and nothing breaks if a source disappears.
+  (`stars.gif`, the twinkling background tile, is generated locally in the same chunky
+  16-color style.)
 
 ## Fun stuff
 
@@ -21,8 +29,6 @@ page's single `Hello world` link.
 - A localStorage "visitor counter" (client-side theatre, collects nothing)
 - A spinning globe, a CAUTION construction sign, and a blinking retro computer
 - A webring with exactly one member
-- Optional 8-bit chiptune (Web Audio, **off by default**, no autoplay)
-- A Konami-code easter egg
 - Honors `prefers-reduced-motion` for anyone who wants the disco toned down
 
 ## Deploy (Cloudflare Pages, from GitHub)
