@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--
+
+     __                        __ __
+    /\ \                      /\ \\ \
+    \_\ \     __     __   __  \_\ \\ \___
+    /'_` \  /'__`\ /\ \/\ \ /'_` \  __` \
+   /\ \L\ \/\ \L\.\\ \ \_/ /\ \L\ \/\ \L\ \
+   \ \___,_\ \__/.\_\ \___/ \ \___,_\ \____/
+    \/__,_ /\/__/\/_/\/__/   \/__,_ /\/___/
+
+   dave.dk :: a domain that just holds email
+   hand-coded in 100% pure HTML. no frameworks were harmed.
+   best viewed in Netscape Navigator 4.0 at 800x600. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>✨ Dave's Corner of Cyberspace ✨</title>
+<meta name="description" content="A domain that does nothing but hold email. Welcome anyway.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%BE%3C/text%3E%3C/svg%3E">
+<style>
+  /* ===== the ONE TRUE STYLESHEET ===== */
+  :root{
+    --ink:#00ff9c;
+    --hot:#ff00c8;
+    --zap:#ffe600;
+    --cyan:#00e5ff;
+    --deep:#05000f;
+  }
+
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"Comic Sans MS","Comic Sans",cursive,"Trebuchet MS",sans-serif;
+    color:#e9e9ff;
+    background-color:#05000f;
+    /* tiled twinkly starfield, generated — no image files, no requests */
+    background-image:
+      radial-gradient(1.5px 1.5px at 20px 30px, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 130px 80px, #9fefff, transparent),
+      radial-gradient(1px 1px at 90px 140px, #fff, transparent),
+      radial-gradient(2px 2px at 200px 40px, #ffd0f5, transparent),
+      radial-gradient(1px 1px at 250px 180px, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 60px 220px, #d7ffe6, transparent),
+      radial-gradient(circle at 50% 0%, #1a0033 0%, #05000f 60%);
+    background-size:280px 260px,280px 260px,280px 260px,280px 260px,280px 260px,280px 260px,100% 100%;
+    background-repeat:repeat,repeat,repeat,repeat,repeat,repeat,no-repeat;
+    animation:drift 90s linear infinite;
+    overflow-x:hidden;
+    text-align:center;
+    cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Ctext y='.9em' font-size='22'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E") 4 4, auto;
+  }
+  @keyframes drift{ from{background-position:0 0,0 0,0 0,0 0,0 0,0 0,0 0;} to{background-position:0 520px,0 -520px,0 260px,0 -260px,0 390px,0 -390px,0 0;} }
+
+  a{ color:var(--cyan); }
+  a:visited{ color:#c58bff; }
+  a:hover{ color:var(--zap); }
+
+  .wrap{ max-width:760px; margin:0 auto; padding:14px 12px 40px; position:relative; z-index:2; }
+
+  /* ---- WordArt-style headline ---- */
+  h1.wordart{
+    font-family:"Impact","Haettenschweiler","Franklin Gothic Bold","Arial Black",sans-serif;
+    font-size:clamp(34px,9vw,74px);
+    line-height:.95;
+    letter-spacing:1px;
+    margin:.35em 0 .1em;
+    background:linear-gradient(90deg,#ff004c,#ff8a00,#ffe600,#38ff5b,#00e5ff,#8b5cff,#ff00c8);
+    background-size:300% 100%;
+    -webkit-background-clip:text; background-clip:text;
+    color:transparent;
+    -webkit-text-stroke:1.5px rgba(0,0,0,.55);
+    filter:drop-shadow(3px 3px 0 rgba(0,0,0,.6));
+    animation:rainbow 6s linear infinite;
+    transform:skewX(-6deg) rotate(-1.5deg);
+  }
+  @keyframes rainbow{ from{background-position:0% 50%;} to{background-position:300% 50%;} }
+  .tagline{ font-size:15px; color:#b9b0ff; margin:.2em 0 1em; }
+
+  .blink{ animation:blink 1s steps(1) infinite; }
+  @keyframes blink{ 50%{opacity:0;} }
+
+  /* ---- scrolling marquee banner ---- */
+  .ticker{
+    border:3px ridge var(--hot);
+    background:linear-gradient(#12002b,#26003f);
+    color:var(--zap);
+    font-weight:bold; font-size:15px;
+    padding:7px 0; margin:0 0 16px;
+    box-shadow:0 0 14px rgba(255,0,200,.5), inset 0 0 20px rgba(0,0,0,.6);
+    overflow:hidden; white-space:nowrap;
+  }
+  .ticker span{ display:inline-block; padding-left:100%; animation:scroll 22s linear infinite; }
+  @keyframes scroll{ to{ transform:translateX(-100%); } }
+
+  /* ---- Under Construction ---- */
+  .construction{
+    display:flex; align-items:center; gap:10px; justify-content:center;
+    background:repeating-linear-gradient(45deg,#ffcc00 0 22px,#111 22px 44px);
+    color:#111; font-weight:bold; font-size:clamp(13px,3.2vw,17px);
+    padding:8px 12px; margin:0 auto 18px; max-width:520px;
+    border:4px solid #111; border-radius:3px;
+    animation:barber 1.4s linear infinite;
+    text-shadow:0 0 2px #fff, 1px 1px 0 #fff;
+    transform:rotate(-1deg);
+  }
+  @keyframes barber{ to{ background-position:62px 0; } }
+  .construction .cone{ font-size:26px; -webkit-text-stroke:0; animation:bob 1.2s ease-in-out infinite; }
+  @keyframes bob{ 50%{ transform:translateY(-4px); } }
+
+  /* ---- 3D bevelled boxes ---- */
+  .box{
+    border:4px outset #6a5acd;
+    background:linear-gradient(180deg,rgba(20,0,40,.92),rgba(8,0,22,.92));
+    box-shadow:0 0 0 2px #05000f, 6px 6px 0 rgba(0,0,0,.5);
+    padding:16px 18px; margin:0 auto 20px; max-width:600px;
+    text-align:left; font-size:16px; line-height:1.55;
+  }
+  .box h2{
+    font-family:"Trebuchet MS",Verdana,sans-serif;
+    margin:0 0 10px; font-size:20px; color:var(--ink);
+    text-shadow:0 0 8px rgba(0,255,156,.6);
+    border-bottom:2px dashed #6a5acd; padding-bottom:6px;
+  }
+  .box h2 .gem{ -webkit-text-stroke:0; }
+
+  /* ---- hidden easter egg ---- */
+  details.egg{ margin-top:10px; }
+  details.egg summary{
+    cursor:pointer; color:var(--zap); font-weight:bold;
+    list-style:none; user-select:none; display:inline-block;
+    border:2px outset #555; background:#1a1030; padding:3px 10px; border-radius:4px;
+  }
+  details.egg summary::-webkit-details-marker{ display:none; }
+  details.egg[open] summary{ border-style:inset; }
+  .egg .reveal{
+    margin-top:12px; padding:12px; background:#000; border:2px inset #333;
+    font-family:"Courier New",monospace; color:#33ff66; font-size:14px;
+  }
+  .egg .reveal a{ color:#5a9bff; text-decoration:underline; }
+  .egg .reveal a:visited{ color:#a06bff; }
+
+  /* ---- hit counter (odometer) ---- */
+  .counter-wrap{ margin:6px 0 22px; font-family:"Courier New",monospace; }
+  .counter{
+    display:inline-flex; gap:3px; padding:6px; background:#111;
+    border:3px inset #444; border-radius:4px;
+  }
+  .counter b{
+    display:inline-block; min-width:20px; padding:3px 0;
+    background:linear-gradient(#333,#000); color:#39ff14;
+    font-size:22px; border:1px solid #0a0a0a; border-radius:2px;
+    text-shadow:0 0 6px #39ff14;
+  }
+  .counter-label{ display:block; font-size:12px; color:#9a90c0; margin-top:6px; }
+
+  /* ---- webring ---- */
+  .webring{
+    border:3px double var(--cyan); background:rgba(0,40,60,.5);
+    padding:10px; margin:0 auto 20px; max-width:420px; border-radius:6px;
+    font-size:14px; box-shadow:0 0 12px rgba(0,229,255,.35);
+  }
+  .webring .ringttl{ color:var(--cyan); font-weight:bold; display:block; margin-bottom:6px; }
+  .btn90{
+    font-family:"Trebuchet MS",sans-serif; font-weight:bold; font-size:14px;
+    cursor:pointer; color:#fff; background:linear-gradient(#5a2ea6,#33006f);
+    border:3px outset #8a5cff; border-radius:4px; padding:4px 10px; margin:2px;
+  }
+  .btn90:active{ border-style:inset; }
+
+  /* ---- 88x31 badges ---- */
+  .badges{ margin:4px 0 18px; line-height:1.9; }
+  .badges img{ margin:2px; vertical-align:middle; image-rendering:pixelated;
+    box-shadow:1px 1px 0 #000; }
+  .badges a:hover img{ outline:2px solid var(--zap); }
+
+  .best{ font-size:13px; color:#c9c0ff; margin-bottom:14px; }
+  .best kbd{ background:#000; color:#39ff14; padding:1px 6px; border:1px solid #333;
+    border-radius:3px; font-family:"Courier New",monospace; }
+
+  /* ---- footer ---- */
+  footer{ font-size:13px; color:#8f86b8; margin-top:26px; line-height:1.7; }
+  footer .aybabtu{ color:var(--hot); font-weight:bold; }
+  .toy{ position:fixed; right:10px; bottom:10px; z-index:9; }
+  .toy button{
+    font-family:"Trebuchet MS",sans-serif; font-size:13px; cursor:pointer;
+    background:linear-gradient(#222,#000); color:var(--ink);
+    border:3px outset #444; border-radius:6px; padding:6px 10px;
+    box-shadow:0 0 10px rgba(0,255,156,.3);
+  }
+  .toy button:active{ border-style:inset; }
+
+  /* sparkle trail bits */
+  .spark{ position:fixed; pointer-events:none; z-index:9999; font-size:16px;
+    transform:translate(-50%,-50%); animation:fade .9s ease-out forwards; }
+  @keyframes fade{ from{opacity:1; scale:1;} to{opacity:0; scale:.2; translate:0 -14px;} }
+
+  /* be kind to folks who don't want the disco */
+  @media (prefers-reduced-motion:reduce){
+    body,.wordart,.construction,.ticker span,.counter b,.spark{ animation:none !important; }
+    .wordart{ background-position:0 50%; }
+    .ticker span{ padding-left:0; }
+  }
+</style>
+</head>
+<body>
+<!-- best viewed in Netscape. sign my guestbook. -->
+<div class="wrap">
+
+  <h1 class="wordart">WELCOME&nbsp;TO<br>DAVE.DK<span class="blink" aria-hidden="true">!!!</span></h1>
+  <p class="tagline">a tiny corner of the information superhighway 🛰️</p>
+
+  <div class="ticker" role="marquee">
+    <span>★ You are visitor number <b id="tick">00000000</b> ★ &nbsp;&nbsp; please sign the guestbook &nbsp;&nbsp; ★ &nbsp;&nbsp; this site is 100&#37; hand-coded &nbsp;&nbsp; ★ &nbsp;&nbsp; best viewed in Netscape 4.0 at 800&times;600 &nbsp;&nbsp; ★ &nbsp;&nbsp; no cookies, no trackers, no JavaScript frameworks &nbsp;&nbsp; ★ &nbsp;&nbsp; Y2K compliant since 1999 &nbsp;&nbsp; ★ &nbsp;&nbsp;</span>
+  </div>
+
+  <div class="construction">
+    <span class="cone" aria-hidden="true">🚧</span>
+    <span>THIS PAGE HAS BEEN UNDER CONSTRUCTION SINCE 1997</span>
+    <span class="cone" aria-hidden="true">🚧</span>
+  </div>
+
+  <div class="box">
+    <h2><span class="gem" aria-hidden="true">💾</span> What is this place?</h2>
+    <p>Absolutely nothing! <code>dave.dk</code> is a domain whose entire job is to
+    quietly hold some email. There is no product, no newsletter, no cloud, and
+    definitely no synergy.</p>
+    <p>But it felt rude to leave the front door empty — so here's a little homepage,
+    built like it's 1999. Grab a Jolt Cola, turn your speakers up, and enjoy the vibes. 🕹️</p>
+  </div>
+
+  <div class="box">
+    <h2><span class="gem" aria-hidden="true">🌍</span> Psst… want a secret?</h2>
+    <p>Legend says this domain once had a homepage with exactly <em>one</em> link on it.
+    A single, perfect link. It is not lost.</p>
+    <details class="egg">
+      <summary>🔒 Click here to declassify</summary>
+      <div class="reveal">
+        <p>&gt; retrieving artifact from /dev/nostalgia ...</p>
+        <p>&gt; found it. the original dave.dk said, in full:</p>
+        <p>🌍 <a href="http://www.gnu.org/fun/jokes/helloworld.html" target="_blank" rel="noopener">Hello&nbsp;world</a></p>
+        <p style="color:#888">&gt; some traditions are worth keeping. _</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="counter-wrap">
+    <div class="counter" id="counter" aria-label="visitor counter" title="totally real visitor counter">
+      <b>0</b><b>0</b><b>0</b><b>0</b><b>0</b><b>0</b><b>0</b><b>0</b>
+    </div>
+    <span class="counter-label">visitors served since the dawn of time*</span>
+  </div>
+
+  <div class="webring">
+    <span class="ringttl">🔗 The Nowhere Webring 🔗</span>
+    <button class="btn90" onclick="ring('prev')">← prev</button>
+    <button class="btn90" onclick="ring('rand')">random</button>
+    <button class="btn90" onclick="ring('next')">next →</button>
+    <button class="btn90" onclick="guestbook()">📖 guestbook</button>
+  </div>
+
+  <div class="badges" aria-label="web badges of honor">
+    <!-- classic 88x31 buttons, hand-drawn as inline-SVG data URIs. non-clickable relics. -->
+    <img width="88" height="31" alt="Made with Notepad" title="Made with Notepad" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='31'%3E%3Crect width='88' height='31' fill='%23000'/%3E%3Crect x='1' y='1' width='86' height='29' fill='none' stroke='%2300ff9c'/%3E%3Ctext x='44' y='13' font-family='monospace' font-size='9' fill='%2300ff9c' text-anchor='middle'%3EMADE WITH%3C/text%3E%3Ctext x='44' y='25' font-family='monospace' font-size='11' font-weight='bold' fill='%23ffe600' text-anchor='middle'%3ENOTEPAD%3C/text%3E%3C/svg%3E">
+    <img width="88" height="31" alt="Netscape Now" title="Netscape Now!" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='31'%3E%3Crect width='88' height='31' fill='%23202020'/%3E%3Crect x='1' y='1' width='86' height='29' fill='none' stroke='%23888'/%3E%3Ccircle cx='16' cy='15' r='9' fill='%2300a2ff'/%3E%3Ctext x='16' y='19' font-family='Arial' font-size='11' font-weight='bold' fill='%23fff' text-anchor='middle'%3EN%3C/text%3E%3Ctext x='54' y='13' font-family='Arial' font-size='9' fill='%23fff' text-anchor='middle'%3ENetscape%3C/text%3E%3Ctext x='54' y='25' font-family='Arial' font-size='10' font-weight='bold' fill='%2300a2ff' text-anchor='middle'%3ENOW!%3C/text%3E%3C/svg%3E">
+    <img width="88" height="31" alt="Valid HTML? lol" title="Valid HTML? lol" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='31'%3E%3Crect width='88' height='31' fill='%23300000'/%3E%3Crect x='1' y='1' width='86' height='29' fill='none' stroke='%23ff5555'/%3E%3Ctext x='44' y='13' font-family='monospace' font-size='9' fill='%23ffffff' text-anchor='middle'%3EVALID HTML%3F%3C/text%3E%3Ctext x='44' y='25' font-family='monospace' font-size='12' font-weight='bold' fill='%23ff5555' text-anchor='middle'%3Elol%3C/text%3E%3C/svg%3E">
+    <img width="88" height="31" alt="Y2K Ready" title="Y2K Ready!" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='31'%3E%3Crect width='88' height='31' fill='%23001a00'/%3E%3Crect x='1' y='1' width='86' height='29' fill='none' stroke='%2339ff14'/%3E%3Ctext x='44' y='14' font-family='monospace' font-size='13' font-weight='bold' fill='%2339ff14' text-anchor='middle'%3EY2K%3C/text%3E%3Ctext x='44' y='25' font-family='monospace' font-size='8' fill='%23ffffff' text-anchor='middle'%3E100%25 READY%3C/text%3E%3C/svg%3E">
+    <img width="88" height="31" alt="Powered by Coffee" title="Powered by Coffee" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='31'%3E%3Crect width='88' height='31' fill='%23241100'/%3E%3Crect x='1' y='1' width='86' height='29' fill='none' stroke='%23c98a3a'/%3E%3Ctext x='50' y='13' font-family='Arial' font-size='9' fill='%23fff' text-anchor='middle'%3EPOWERED BY%3C/text%3E%3Ctext x='50' y='25' font-family='Arial' font-size='11' font-weight='bold' fill='%23c98a3a' text-anchor='middle'%3E%E2%98%95 COFFEE%3C/text%3E%3C/svg%3E">
+  </div>
+
+  <p class="best">🖥️ Best viewed in <b>Netscape Navigator 4.0</b> at <kbd>800&times;600</kbd> with <kbd>256</kbd> colors.</p>
+
+  <footer>
+    <p>© 1997–2026 &nbsp;•&nbsp; <span class="aybabtu">ALL YOUR BASE ARE BELONG TO US</span></p>
+    <p>Made with 100&#37; pure HTML, a text editor, and zero frameworks.<br>
+    No cookies. No tracking. No email address, either — nice try. 😉</p>
+    <p style="color:#5a527e; font-size:11px;">*counter is enthusiastic, not accurate.</p>
+  </footer>
+</div>
+
+<div class="toy">
+  <button id="tunebtn" onclick="toggleTune()" title="warning: extremely 8-bit">🔊 play MIDI</button>
+</div>
+
+<script>
+/* ============================================================
+   dave.dk :: all vanilla JS. no libraries. no build step.
+   ============================================================ */
+(function(){
+  "use strict";
+
+  /* ---- visitor counter (client-side theatre via localStorage) ---- */
+  var KEY = "davedk_visits";
+  var n = parseInt(localStorage.getItem(KEY) || "", 10);
+  if (isNaN(n)) {
+    // seed with a suitably impressive, suitably fake number
+    n = 1337042 + Math.floor((new Date().getTime() / 6.0e7) % 5000);
+  }
+  n = n + 1;
+  try { localStorage.setItem(KEY, String(n)); } catch(e){ /* private mode, whatever */ }
+
+  var padded = ("00000000" + n).slice(-8);
+  var cells = document.querySelectorAll("#counter b");
+  for (var i = 0; i < cells.length; i++) { cells[i].textContent = padded.charAt(i); }
+  var tick = document.getElementById("tick");
+  if (tick) tick.textContent = padded;
+
+  /* ---- sparkle cursor trail ---- */
+  var sparks = ["✨","⭐","💫","🌟","·"];
+  var last = 0;
+  window.addEventListener("pointermove", function(e){
+    var t = e.timeStamp || (last + 60);
+    if (t - last < 45) return;            // throttle
+    last = t;
+    var s = document.createElement("span");
+    s.className = "spark";
+    s.textContent = sparks[(Math.floor(t/45)) % sparks.length];
+    s.style.left = e.clientX + "px";
+    s.style.top  = e.clientY + "px";
+    document.body.appendChild(s);
+    setTimeout(function(){ s.remove(); }, 900);
+  }, {passive:true});
+
+  /* ---- the "webring" that goes nowhere ---- */
+  var quips = {
+    prev: ["⏪ There is no previous site. Time is a flat starfield.",
+           "You went back. It's the same page. Spooky. 👻"],
+    next: ["⏩ Next stop: also nowhere. Enjoy the void!",
+           "The ring is a circle of one. You are that one. 🔵"],
+    rand: ["🎲 Randomly selected site: dave.dk. What are the odds!",
+           "🎲 Rolled a natural 20. Reward: this exact page."]
+  };
+  window.ring = function(dir){
+    var list = quips[dir] || quips.rand;
+    var pick = list[(Math.floor((new Date().getTime())/1000)) % list.length];
+    alert(pick);
+  };
+  window.guestbook = function(){
+    alert("📖 GUESTBOOK\n\n[ this notebook is empty ]\n\nBe the first to sign it in your heart. ❤️\n(no data is collected — pinky promise)");
+  };
+
+  /* ---- optional 8-bit chiptune, Web Audio, OFF by default ---- */
+  var audioCtx = null, playing = false, timer = null, step = 0;
+  // a cheerful little loop (semitone offsets from A4=440)
+  var melody = [0,4,7,12,7,4,0,4,7,12,16,12,7,4, 2,5,9,14,9,5,2, -1,3,6,11,6,3,-1];
+  function freq(semi){ return 440 * Math.pow(2, semi/12); }
+  window.toggleTune = function(){
+    var btn = document.getElementById("tunebtn");
+    if (!playing){
+      try{
+        audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === "suspended") audioCtx.resume();
+      }catch(e){ alert("Your browser said no to bleeps and bloops. 😢"); return; }
+      playing = true; step = 0; btn.textContent = "🔇 stop MIDI";
+      var tempo = 150; // ms per note
+      timer = setInterval(function(){
+        var t = audioCtx.currentTime;
+        var osc = audioCtx.createOscillator();
+        var g = audioCtx.createGain();
+        osc.type = "square";
+        osc.frequency.setValueAtTime(freq(melody[step % melody.length]), t);
+        g.gain.setValueAtTime(0.0001, t);
+        g.gain.exponentialRampToValueAtTime(0.10, t + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + tempo/1000 * 0.9);
+        osc.connect(g).connect(audioCtx.destination);
+        osc.start(t); osc.stop(t + tempo/1000);
+        step++;
+      }, tempo);
+    } else {
+      playing = false; clearInterval(timer); timer = null;
+      btn.textContent = "🔊 play MIDI";
+    }
+  };
+
+  /* konami code -> extra chaos, because of course */
+  var konami = [38,38,40,40,37,39,37,39,66,65], kpos = 0;
+  window.addEventListener("keydown", function(e){
+    kpos = (e.keyCode === konami[kpos]) ? kpos+1 : 0;
+    if (kpos === konami.length){
+      kpos = 0;
+      document.body.style.transition = "filter .3s";
+      document.body.style.filter = "hue-rotate(180deg) saturate(2)";
+      setTimeout(function(){ document.body.style.filter=""; }, 1600);
+      alert("⬆⬆⬇⬇⬅➡⬅➡🅱🅰\n\n30 extra lives granted. Use them wisely. 🎮");
+    }
+  });
+})();
+</script>
+</body>
+</html>
