@@ -19,7 +19,7 @@ page's single `Hello world` link.
 
 - Star-GIF cursor trail (the way 90s pages actually did it)
 - A localStorage "visitor counter" (client-side theatre, collects nothing)
-- A spinning globe, a CAUTION construction sign, and a blinking retro-computer mascot
+- A spinning globe, a CAUTION construction sign, and a blinking retro computer
 - A webring with exactly one member
 - Optional 8-bit chiptune (Web Audio, **off by default**, no autoplay)
 - A Konami-code easter egg
