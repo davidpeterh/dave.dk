@@ -1,16 +1,17 @@
 # dave.dk
 
-A gloriously geeky 90s-GeoCities tribute homepage for `dave.dk`, a domain whose only
-real job is holding some private email. There's no product here — just a homepage the
-way 1999 made them: a tiled starfield GIF, WordArt, a scrolling marquee, an eternal
-"Under Construction" sign, a fake hit counter, a webring that goes nowhere, 88×31
-badges, and a hidden nod to the old page's single `Hello world` link.
+A gloriously geeky GeoCities tribute homepage for `dave.dk`, a domain whose only real
+job is holding some private email. There's no product here, just a homepage the way the
+late 90s and early 2000s made them: a tiled starfield GIF, rainbow WordArt, a scrolling
+marquee, an eternal "Under Construction" sign, a fake hit counter, a webring that goes
+nowhere, a MIDI jukebox, 88×31 badges, and a hidden nod to the old page's single
+`Hello world` link.
 
-The copy and styling deliberately stay in character for 1999: earnest webmaster voice
-(no modern irony or post-1999 memes), a real repeating background tile instead of CSS
-gradients, hard bevels instead of soft glows, no rounded corners, no viewport meta tag
-(phones get the authentic desktop experience), and chunky `steps()` animation timing so
-motion chugs like GIF frames instead of easing at 60fps.
+The copy and styling stay in character for the era: earnest webmaster voice, a real
+repeating background tile instead of CSS gradients, hard bevels instead of soft glows,
+no rounded corners, no viewport meta tag (phones get the authentic desktop experience),
+and chunky `steps()` animation timing so motion chugs like GIF frames instead of easing
+at 60fps. "All your base are belong to us" stays, because that one is timeless.
 
 ## What's inside
 
@@ -29,11 +30,12 @@ motion chugs like GIF frames instead of easing at 60fps.
 - A localStorage "visitor counter" (client-side theatre, collects nothing)
 - A spinning globe, a CAUTION construction sign, and a blinking retro computer
 - A webring with exactly one member
+- An optional 8-bit MIDI jukebox (Web Audio, off by default, no autoplay)
 - Honors `prefers-reduced-motion` for anyone who wants the disco toned down
 
 ## Deploy (Cloudflare Pages, from GitHub)
 
-This is a plain static site — **no build tooling required**.
+This is a plain static site. **No build tooling required.**
 
 1. In the Cloudflare dashboard: **Workers & Pages → Create → Pages → Connect to Git**,
    and pick this repository.
