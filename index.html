@@ -121,7 +121,7 @@
 <main>
   <p class="kicker mono reveal d1">
     <span class="id"><span class="dot"></span> dave.dk</span>
-    <a class="year" href="1999.html" aria-label="visit the 1999 version of this page">since 1999</a>
+    <a class="year" href="/1999" aria-label="visit the 1999 version of this page">since 1999</a>
   </p>
 
   <h1 class="reveal d2">What is this place?</h1>
@@ -137,7 +137,7 @@
   var seq = [38,38,40,40,37,39,37,39,66,65], i = 0;
   window.addEventListener("keydown", function(e){
     if (e.keyCode === seq[i]) {
-      if (++i === seq.length) { location.href = "1999.html"; }
+      if (++i === seq.length) { location.href = "/1999"; }
     } else {
       i = (e.keyCode === seq[0]) ? 1 : 0;
     }
